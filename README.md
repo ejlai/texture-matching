@@ -1,14 +1,23 @@
 # Texture Matching using Local Binary Patterns (LBP)
-8-bit binary array value calculation
 
-If the neighbouring pixel value is greater or equal to the central pixel value, the corresponding bit in the binary array is set to 1 else if the neighbouring pixel value is less than the central pixel value, the corresponding bit in the binary array is set to 0. 
+## Updated for Python 3.x (Tested on Python 3.6.7, ubutnu 18.04)
+
+__8-bit binary array value calculation__
+
+If the neighbouring pixel value is greater or equal to the central pixel value, the corresponding bit in the binary array is set to 1 else the corresponding bit in the binary array is set to 0. 
+(LBP at wiki page, https://en.wikipedia.org/wiki/Local_binary_patterns)
 
 Related blog post explaining the code - [Click
 Here](http://hanzratech.in/2015/05/30/local-binary-patterns.html)
 
-LBP at wiki page
+## Install packages for Python3
 
-https://en.wikipedia.org/wiki/Local_binary_patterns
+```
+$ pip3 install joblib
+$ pip3 install cvutils
+...
+
+```
 
 ## Usage
 
@@ -17,14 +26,15 @@ __Clone the Project__
 From ubuntu terminal
 ```
 $ git clone https://github.com/ejlai/texture-matching.git
-cd texture-matching
+$ cd texture-matching
 
 ```
 
 __Perform training using__
 
 ```
-python3 perform-training.py -t data/lbp/train/ -l data/lbp/class_train.txt
+texture-matching$ sudo python3 perform-training.py -t data/lbp/train/ -l data/lbp/class_train.txt
+
 ```
 
 __Perform testing using__
