@@ -1,3 +1,4 @@
+# Updaed for Python3 Jun 11, 2019, from Barcelona
 #!/usr/bin/python
 # OpenCV bindings
 import cv2
@@ -15,7 +16,8 @@ import matplotlib.pyplot as plt
 # For array manipulations
 import numpy as np
 # For saving histogram values
-from sklearn.externals import joblib
+# from sklearn.externals import joblib
+import joblib
 # For command line input
 import argparse as ap
 # Utility Package
@@ -31,7 +33,8 @@ args = vars(parser.parse_args())
 train_images = cvutils.imlist(args["trainingSet"])
 # Dictionary containing image paths as keys and corresponding label as value
 train_dic = {}
-with open(args['imageLabels'], 'rb') as csvfile:
+#with open(args['imageLabels'], 'rb') as csvfile: (Jun 11, 2019)
+with open(args['imageLabels']) as csvfile:
     reader = csv.reader(csvfile, delimiter=' ')
     for row in reader:
         train_dic[row[0]] = int(row[1])
