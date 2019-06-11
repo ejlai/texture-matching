@@ -37,6 +37,39 @@ texture-matching$ sudo python3 perform-training.py -t data/lbp/train/ -l data/lb
 
 ```
 
+__Troubleshooting__
+
+To avoid such errors as below, run the test with sudo 
+
+```
+
+(python3:4490): GLib-GObject-WARNING **: 12:24:10.920: cannot register existing type 'GdkDisplayManager'
+
+(python3:4490): GLib-CRITICAL **: 12:24:10.920: g_once_init_leave: assertion 'result != 0' failed
+
+(python3:4490): GLib-GObject-CRITICAL **: 12:24:10.920: g_object_new_with_properties: assertion 'G_TYPE_IS_OBJECT (object_type)' failed
+
+(python3:4490): GLib-GObject-WARNING **: 12:24:10.920: invalid (NULL) pointer instance
+
+(python3:4490): GLib-GObject-CRITICAL **: 12:24:10.920: g_signal_connect_data: assertion 'G_TYPE_CHECK_INSTANCE (instance)' failed
+
+(python3:4490): GLib-GObject-WARNING **: 12:24:10.920: invalid (NULL) pointer instance
+
+(python3:4490): GLib-GObject-CRITICAL **: 12:24:10.920: g_signal_connect_data: assertion 'G_TYPE_CHECK_INSTANCE (instance)' failed
+
+(python3:4490): GLib-GObject-WARNING **: 12:24:10.922: cannot register existing type 'GdkDisplay'
+
+(python3:4490): GLib-CRITICAL **: 12:24:10.922: g_once_init_leave: assertion 'result != 0' failed
+
+(python3:4490): GLib-GObject-CRITICAL **: 12:24:10.922: g_type_register_static: assertion 'parent_type > 0' failed
+
+(python3:4490): GLib-CRITICAL **: 12:24:10.922: g_once_init_leave: assertion 'result != 0' failed
+
+(python3:4490): GLib-GObject-CRITICAL **: 12:24:10.922: g_object_new_with_properties: assertion 'G_TYPE_IS_OBJECT (object_type)' failed
+Segmentation fault (core dumped)
+
+```
+
 __Perform testing using__
 
 ```
