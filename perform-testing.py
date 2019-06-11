@@ -66,13 +66,15 @@ for test_image in test_images:
     # For each image in the training dataset
     # Calculate the chi-squared distance and the sort the values
     for index, x in enumerate(X_test):
-        score = cv2.compareHist(np.array(x, dtype=np.float32), np.array(hist, dtype=np.float32), cv2.cv.CV_COMP_CHISQR)
+        #score = cv2.compareHist(np.array(x, dtype=np.float32), np.array(hist, dtype=np.float32), cv2.cv.CV_COMP_CHISQR)
+        #Jun 11, 2019 https://stackoverflow.com/questions/40451706/how-to-use-comparehist-function-opencv
+        score = cv2.compareHist(np.array(x, dtype=np.float32), np.array(hist, dtype=np.float32), cv2.HISTCMP_CHISQR)
         results.append((X_name[index], round(score, 3)))
     results = sorted(results, key=lambda score: score[1])
     results_all[test_image] = results
-    print "Displaying scores for {} ** \n".format(test_image)
+    print ("Displaying scores for {} ** \n".format(test_image))# Jun 11, 2019
     for image, score in results:
-        print "{} has score {}".format(image, score)
+        print ("{} has score {}".format(image, score)) # Jun 11, 2019
 
 for test_image, results in results_all.items():
     # Read the image
