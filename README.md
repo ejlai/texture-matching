@@ -40,7 +40,8 @@ texture-matching$ sudo python3 perform-training.py -t data/lbp/train/ -l data/lb
 __Perform testing using__
 
 ```
-python perform-testing.py -t data/lbp/test/ -l data/lbp/class_test.txt
+texture-matching$ sudo python3 perform-testing.py -t data/lbp/test/ -l data/lbp/class_test.txt
+
 ```
 ## Results
 
