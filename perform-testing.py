@@ -3,12 +3,12 @@
 # OpenCV bindings
 import cv2
 # To performing path manipulations 
-import os
+#import os
 # Local Binary Pattern function
 from skimage.feature import local_binary_pattern
 # To calculate a normalized histogram 
 from scipy.stats import itemfreq
-from sklearn.preprocessing import normalize
+#from sklearn.preprocessing import normalize
 # To read class from file
 import csv
 # For plotting
