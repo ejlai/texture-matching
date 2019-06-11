@@ -1,3 +1,4 @@
+# Updated for Python 3, Jun 11, 2019
 #!/usr/bin/python
 # OpenCV bindings
 import cv2
@@ -15,7 +16,8 @@ import matplotlib.pyplot as plt
 # For array manipulations
 import numpy as np
 # For saving histogram values
-from sklearn.externals import joblib
+# from sklearn.externals import joblib # deprecated in 0.21 (Updated on Jun 11, 2019)
+import joblib # pip3 install joblib
 # For command line input
 import argparse as ap
 # Utility Package
@@ -34,7 +36,9 @@ X_name, X_test, y_test = joblib.load("lbp.pkl")
 test_images = cvutils.imlist(args["testingSet"])
 # Dictionary containing image paths as keys and corresponding label as value
 test_dic = {}
-with open(args["imageLabels"], 'rb') as csvfile:
+# Jun 11, 2019: remove 'rb' to avoid this error: _csv.Error: iterator should return strings, not bytes
+#with open(args["imageLabels"], 'rb') as csvfile:
+with open(args["imageLabels"]) as csvfile:
     reader = csv.reader(csvfile, delimiter=' ')
     for row in reader:
         test_dic[row[0]] = int(row[1])
