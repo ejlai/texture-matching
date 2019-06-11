@@ -12,10 +12,19 @@ https://en.wikipedia.org/wiki/Local_binary_patterns
 
 ## Usage
 
+__Clone the Project__
+
+From ubuntu terminal
+```
+$ git clone https://github.com/ejlai/texture-matching.git
+cd texture-matching
+
+```
+
 __Perform training using__
 
 ```
-python perform-training.py -t data/lbp/train/ -l data/lbp/class_train.txt
+python3 perform-training.py -t data/lbp/train/ -l data/lbp/class_train.txt
 ```
 
 __Perform testing using__
