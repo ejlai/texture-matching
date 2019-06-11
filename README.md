@@ -1,7 +1,14 @@
 # Texture Matching using Local Binary Patterns (LBP)
+8-bit binary array value calculation
+
+If the neighbouring pixel value is greater or equal to the central pixel value, the corresponding bit in the binary array is set to 1 else if the neighbouring pixel value is less than the central pixel value, the corresponding bit in the binary array is set to 0. 
 
 Related blog post explaining the code - [Click
 Here](http://hanzratech.in/2015/05/30/local-binary-patterns.html)
+
+LBP at wiki page
+
+https://en.wikipedia.org/wiki/Local_binary_patterns
 
 ## Usage
 
