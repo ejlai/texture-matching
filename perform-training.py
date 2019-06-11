@@ -8,7 +8,7 @@ import os
 from skimage.feature import local_binary_pattern
 # To calculate a normalized histogram 
 from scipy.stats import itemfreq
-from sklearn.preprocessing import normalize
+#from sklearn.preprocessing import normalize
 # To read class from file
 import csv
 # For plotting
