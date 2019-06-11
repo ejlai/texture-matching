@@ -91,7 +91,7 @@ Segmentation fault (core dumped)
 
 ## Results
 
-Let's check out the results.
+Let's check out the results. The smaller the score, the better the result matches.
 
 __Input Image -- ROCK Class__
 
